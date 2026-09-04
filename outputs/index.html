@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Explorer — find the next thing to build</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>.logo.a{background:#d2704f}.logo.x{background:#111}.logo.k{background:#0b8264}</style>
+  </head>
+  <body>
+    <div class="grain"></div>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="AI Explorer home"><span class="brand-mark">✦</span> AI EXPLORER</a>
+      <nav><a href="#explore">Explore</a><a href="#prompts">Prompts</a><a href="#projects">Projects</a><a href="#open-source">Open source</a></nav>
+      <button class="nav-cta">Submit a project <span>↗</span></button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <p class="eyebrow"><span></span> The field guide to applied intelligence</p>
+        <h1>Find the next<br /><em>thing to build.</em></h1>
+        <p class="hero-copy">A carefully indexed universe of AI models, useful prompts, thoughtful templates, and open-source projects worth knowing.</p>
+        <div class="search-wrap"><span class="search-icon">⌕</span><input id="search" type="search" placeholder="Search models, prompts, repos, projects…" /><kbd>⌘ K</kbd></div>
+        <div class="trending"><span>Trending now</span><button>Reasoning models</button><button>Agentic workflows</button><button>Image generation</button></div>
+        <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+      </section>
+
+      <section class="ticker"><div>THE AI FIELD IS MOVING FAST <b>✦</b> KEEP YOUR BEARINGS <b>✦</b> THE AI FIELD IS MOVING FAST <b>✦</b> KEEP YOUR BEARINGS <b>✦</b></div></section>
+
+      <section class="explore section" id="explore">
+        <div class="section-head"><div><p class="eyebrow">Explore the landscape</p><h2>One place. <em>Every signal.</em></h2></div><a href="#all" class="text-link">See the full index <span>→</span></a></div>
+        <div class="filters" role="tablist"><button class="active" data-filter="all">All picks <b>24</b></button><button data-filter="models">AI models <b>08</b></button><button data-filter="prompts">Prompt kits <b>06</b></button><button data-filter="templates">Templates <b>05</b></button><button data-filter="repos">Open source <b>05</b></button></div>
+        <div class="feature-grid" id="all">
+          <article class="feature-card violet searchable" data-type="models"><div class="card-meta"><span>FEATURED MODEL</span><span class="signal">● CURRENT</span></div><div class="model-glyph">✳</div><h3>Claude<br />Fable 5.1</h3><p>Frontier coding, knowledge work, and long-horizon reasoning.</p><div class="card-bottom"><span>Anthropic · September 2026</span><button aria-label="Open Claude Fable 5.1">↗</button></div></article>
+          <article class="feature-card lime searchable" data-type="prompts"><div class="card-meta"><span>PROMPT KIT</span><span>01 / 06</span></div><div class="quote-mark">“</div><h3>The startup<br />operator pack</h3><p>18 prompts for sharper decisions and faster shipping.</p><div class="card-bottom"><span>Strategy · Ops</span><button aria-label="Open prompt kit">↗</button></div></article>
+          <article class="feature-card dark searchable" data-type="repos"><div class="card-meta"><span>OPEN SOURCE</span><span class="stars">★ 91.3k</span></div><div class="repo-icon">◈</div><h3>LangChain</h3><p>Frameworks for developing applications powered by language models.</p><div class="card-bottom"><span>Python · TypeScript</span><button aria-label="Open LangChain">↗</button></div></article>
+        </div>
+      </section>
+
+      <section class="section model-section">
+        <div class="section-head"><div><p class="eyebrow">Models worth your time</p><h2>Start with the <em>right brain.</em></h2></div><a href="#all" class="text-link">Compare models <span>→</span></a></div>
+        <div class="model-list">
+          <article class="model-row searchable" data-type="models"><div class="rank">01</div><div class="logo a">A</div><div class="model-name"><h3>Claude Fable 5.1</h3><p>Anthropic · Frontier</p></div><p class="description">Frontier coding, knowledge work, research, and long-running tasks.</p><div class="tags"><span>Reasoning</span><span>Agents</span></div><button>View <span>↗</span></button></article>
+          <article class="model-row searchable" data-type="models"><div class="rank">02</div><div class="logo o">O</div><div class="model-name"><h3>GPT‑6 Astra</h3><p>OpenAI · Agentic</p></div><p class="description">Flagship computer use, professional work, research, and coding.</p><div class="tags"><span>1M context</span><span>API</span></div><button>View <span>↗</span></button></article>
+          <article class="model-row searchable" data-type="models"><div class="rank">03</div><div class="logo x">X</div><div class="model-name"><h3>Grok 4.6</h3><p>xAI · Frontier</p></div><p class="description">Frontier coding, agentic tasks, and knowledge work with vision input.</p><div class="tags"><span>500K context</span><span>Vision</span></div><button>View <span>↗</span></button></article>
+          <article class="model-row searchable" data-type="models"><div class="rank">04</div><div class="logo k">K</div><div class="model-name"><h3>Kimi K3</h3><p>Moonshot AI · Open weights</p></div><p class="description">Open frontier intelligence with a 1M-token context and native vision.</p><div class="tags"><span>Open source</span><span>Vision</span></div><button>View <span>↗</span></button></article>
+          <article class="model-row searchable" data-type="models"><div class="rank">05</div><div class="logo g">G</div><div class="model-name"><h3>Gemini 3.8 Flash</h3><p>Google · Fast multimodal</p></div><p class="description">Production-ready speed for browser, mobile, and desktop agents.</p><div class="tags"><span>Multimodal</span><span>API</span></div><button>View <span>↗</span></button></article>
+        </div>
+      </section>
+
+      <section class="prompt-section section" id="prompts"><div class="prompt-left"><p class="eyebrow">Prompt library</p><h2>Prompts that turn<br />blank pages into<br /><em>momentum.</em></h2><p>Less prompt engineering theatre. More practical starting points from people doing the work.</p><a href="#all" class="button-light">Browse all prompt kits <span>→</span></a></div><div class="prompt-cards"><article class="paper searchable" data-type="prompts"><span>PRODUCT</span><h3>Turn user interviews into a product brief</h3><p>Extract decisions, tensions, and a focused next experiment.</p><footer><i>12 min read</i><b>→</b></footer></article><article class="paper tilted searchable" data-type="templates"><span>WRITING</span><h3>The one-page strategy memo</h3><p>A thinking template for when the stakes are high.</p><footer><i>8 min read</i><b>→</b></footer></article></div></section>
+
+      <section class="section projects" id="projects"><div class="section-head"><div><p class="eyebrow">Built in public</p><h2>Projects with <em>traction.</em></h2></div><a href="#all" class="text-link">Explore projects <span>→</span></a></div><div class="project-grid"><article class="project-card searchable" data-type="templates"><div class="project-image p1"><span>V</span><i>VISUALIZE</i></div><p>DATA · CREATIVE</p><h3>Visualize</h3><small>Turn any idea into a living visual narrative.</small></article><article class="project-card searchable" data-type="repos"><div class="project-image p2"><span>◒</span><i>open-source</i></div><p>DEVELOPER TOOLS</p><h3>Continue</h3><small>The open-source AI code assistant.</small></article><article class="project-card searchable" data-type="models"><div class="project-image p3"><span>◉</span><i>make it real</i></div><p>DESIGN · AI</p><h3>v0</h3><small>Generative UI from a simple text prompt.</small></article></div></section>
+
+      <section class="open-source section" id="open-source"><div><p class="eyebrow">Open-source radar</p><h2>What builders are<br /><em>actually starring.</em></h2><a href="#all" class="text-link">Browse repositories <span>→</span></a></div><div class="repo-list"><article class="searchable" data-type="repos"><span>01</span><div><h3>browser-use</h3><p>Make websites accessible for AI agents.</p></div><b>★ 61,831</b><button>↗</button></article><article class="searchable" data-type="repos"><span>02</span><div><h3>Open WebUI</h3><p>User-friendly self-hosted AI interface.</p></div><b>★ 78,204</b><button>↗</button></article><article class="searchable" data-type="repos"><span>03</span><div><h3>ComfyUI</h3><p>The most powerful node-based image workflow.</p></div><b>★ 63,319</b><button>↗</button></article></div></section>
+    </main>
+    <footer><a class="brand" href="#top"><span class="brand-mark">✦</span> AI EXPLORER</a><p>Signal over noise, every day.</p><div><a href="#top">Instagram</a><a href="#top">X / Twitter</a><a href="#top">GitHub</a></div></footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
