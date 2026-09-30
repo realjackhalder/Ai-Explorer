@@ -1,66 +1,653 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Explorer — find the next thing to build</title>
+    <title>AI Explorer — National Index of Applied Frontier Intelligence</title>
+    <meta name="description" content="An authoritative national index of frontier reasoning models, open weights, agentic protocols, and high-performance inference engines." />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="alternate icon" href="./favicon.ico" />
     <link rel="apple-touch-icon" href="./icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
-    <style>.logo.a{background:#d2704f}.logo.x{background:#111}.logo.k{background:#0b8264}</style>
   </head>
   <body>
-    <div class="grain"></div>
-    <header class="topbar">
-      <a class="brand" href="#top" aria-label="AI Explorer home"><span class="brand-mark">✦</span> AI EXPLORER</a>
-      <nav><a href="#explore">Explore</a><a href="#prompts">Prompts</a><a href="#projects">Projects</a><a href="#open-source">Open source</a></nav>
-      <button class="nav-cta">Submit a project <span>↗</span></button>
+    <div class="film-grain"></div>
+
+    <!-- 1. Federal Standard Top Ribbon (Genesis & TrumpRx Style) -->
+    <div class="gov-ribbon">
+      <div class="gov-ribbon-left">
+        <div class="usa-flag" aria-hidden="true"></div>
+        <span>An Official Index of Applied Intelligence · AI.Explorer.gov</span>
+      </div>
+      <div class="gov-ribbon-right">
+        <span class="live-indicator">
+          <span class="live-dot"></span> Live Telemetry Active
+        </span>
+        <span>Updated September 2026</span>
+      </div>
+    </div>
+
+    <!-- 2. Precision Top Navigation Bar (TrumpRx & NDS Style) -->
+    <header class="header-nav">
+      <a href="#top" class="brand-pill" aria-label="AI Explorer Home">
+        <span>AI</span>
+        <span class="divider"></span>
+        <span class="brand-italic">Explorer</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#console" class="nav-link">AI Console</a>
+        <a href="#pass" class="nav-link">Compute Pass</a>
+        <a href="#hierarchy" class="nav-link">AI Stack</a>
+        <a href="#economics" class="nav-link">Cost Reset</a>
+        <a href="#directory" class="nav-link">Directory</a>
+        <a href="#prompts" class="nav-link">Blueprints</a>
+        <a href="#tracks" class="nav-link">Missions</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-search-trigger" id="nav-search-btn" aria-label="Search directory">
+          <span>Search</span>
+          <span class="kbd-badge">⌘ K</span>
+        </button>
+        <a href="mailto:submit@aiexplorer.gov?subject=Model%20Submission" class="btn-primary-pill">
+          Submit Model <span>↗</span>
+        </a>
+      </div>
     </header>
 
     <main id="top">
-      <section class="hero">
-        <p class="eyebrow"><span></span> The field guide to applied intelligence</p>
-        <h1>Find the next<br /><em>thing to build.</em></h1>
-        <p class="hero-copy">A carefully indexed universe of AI models, useful prompts, thoughtful templates, and open-source projects worth knowing.</p>
-        <div class="search-wrap"><span class="search-icon">⌕</span><input id="search" type="search" placeholder="Search models, prompts, repos, projects…" /><kbd>⌘ K</kbd></div>
-        <div class="trending"><span>Trending now</span><button>Reasoning models</button><button>Agentic workflows</button><button>Image generation</button></div>
-        <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
-      </section>
+      <!-- 3. Monumental Hero Section -->
+      <section class="hero-section">
+        <div class="hero-meta-row">
+          <div class="hero-badge-pill">
+            <span>●</span> 2026 Frontier Intelligence &amp; Autonomous Systems
+          </div>
+          <div class="font-mono text-nds-caption" style="color: var(--ink-muted);">
+            Section 508 Compliant · Zero Commercial Telemetry Policy
+          </div>
+        </div>
 
-      <section class="ticker"><div>THE AI FIELD IS MOVING FAST <b>✦</b> KEEP YOUR BEARINGS <b>✦</b> THE AI FIELD IS MOVING FAST <b>✦</b> KEEP YOUR BEARINGS <b>✦</b></div></section>
+        <h1 class="hero-title">
+          Find the next<br />
+          <em>thing to build.</em>
+        </h1>
 
-      <section class="explore section" id="explore">
-        <div class="section-head"><div><p class="eyebrow">Explore the landscape</p><h2>One place. <em>Every signal.</em></h2></div><a href="#all" class="text-link">See the full index <span>→</span></a></div>
-        <div class="filters" role="tablist"><button class="active" data-filter="all">All picks <b>24</b></button><button data-filter="models">AI models <b>08</b></button><button data-filter="prompts">Prompt kits <b>06</b></button><button data-filter="templates">Templates <b>05</b></button><button data-filter="repos">Open source <b>05</b></button></div>
-        <div class="feature-grid" id="all">
-          <article class="feature-card violet searchable" data-type="models"><div class="card-meta"><span>FEATURED MODEL</span><span class="signal">● CURRENT</span></div><div class="model-glyph">✳</div><h3>Claude<br />Fable 5.1</h3><p>Frontier coding, knowledge work, and long-horizon reasoning.</p><div class="card-bottom"><span>Anthropic · September 2026</span><button aria-label="Open Claude Fable 5.1">↗</button></div></article>
-          <article class="feature-card lime searchable" data-type="prompts"><div class="card-meta"><span>PROMPT KIT</span><span>01 / 06</span></div><div class="quote-mark">“</div><h3>The startup<br />operator pack</h3><p>18 prompts for sharper decisions and faster shipping.</p><div class="card-bottom"><span>Strategy · Ops</span><button aria-label="Open prompt kit">↗</button></div></article>
-          <article class="feature-card dark searchable" data-type="repos"><div class="card-meta"><span>OPEN SOURCE</span><span class="stars">★ 91.3k</span></div><div class="repo-icon">◈</div><h3>LangChain</h3><p>Frameworks for developing applications powered by language models.</p><div class="card-bottom"><span>Python · TypeScript</span><button aria-label="Open LangChain">↗</button></div></article>
+        <p class="hero-sub">
+          A national index of frontier intelligence, hybrid reasoning models, Model Context Protocol (MCP) agents, and open-weights sovereign infrastructure.
+        </p>
+
+        <!-- America.gov Style Dual-Engine AI Prompt Console -->
+        <div class="prompt-console" id="console">
+          <div class="prompt-console-header">
+            <span>Ask the AI Explorer Intelligence Engine</span>
+            <div class="engine-badges">
+              <button class="engine-btn active" onclick="setConsoleEngine('claude-3-7', this)">Claude 3.7</button>
+              <button class="engine-btn" onclick="setConsoleEngine('deepseek-r1', this)">DeepSeek R1</button>
+              <button class="engine-btn" onclick="setConsoleEngine('gemini-2-0', this)">Gemini 2.0</button>
+              <button class="engine-btn" onclick="setConsoleEngine('o3-mini', this)">o3-mini</button>
+            </div>
+          </div>
+
+          <div class="prompt-input-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input
+              id="console-prompt-input"
+              class="console-input"
+              type="text"
+              placeholder="Ask anything (e.g., 'Compare Claude 3.7 vs DeepSeek R1 for code' or 'Best open-weights model for local vLLM')..."
+            />
+            <button class="btn-console-submit" onclick="executeConsoleQuery()">Query Engine →</button>
+          </div>
+
+          <!-- Quick Suggestion Chips -->
+          <div class="prompt-chips-row">
+            <span style="color: var(--ink-subtle);">Suggested:</span>
+            <button class="prompt-chip" onclick="askPresetQuery('best-code-ratio')">Best code reasoning per dollar?</button>
+            <button class="prompt-chip" onclick="askPresetQuery('deepseek-vs-o3')">DeepSeek R1 vs o3-mini?</button>
+            <button class="prompt-chip" onclick="askPresetQuery('mcp-setup')">What is Model Context Protocol (MCP)?</button>
+            <button class="prompt-chip" onclick="askPresetQuery('local-vram')">Local 32B model VRAM requirements?</button>
+          </div>
+
+          <!-- Response Drawer -->
+          <div class="console-response-drawer" id="console-response-drawer">
+            <div class="response-card" id="console-response-card">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="search-filter-pills" role="tablist" aria-label="Filter directory categories">
+          <button role="tab" aria-selected="true" class="filter-pill active" data-filter="all">All Ecosystem (<span id="count-all">12</span>)</button>
+          <button role="tab" aria-selected="false" class="filter-pill" data-filter="frontier">Frontier Reasoning (<span id="count-frontier">4</span>)</button>
+          <button role="tab" aria-selected="false" class="filter-pill" data-filter="open-weights">Open Weights &amp; SLMs (<span id="count-open-weights">3</span>)</button>
+          <button role="tab" aria-selected="false" class="filter-pill" data-filter="agents">Agents &amp; Protocols (<span id="count-agents">3</span>)</button>
+          <button role="tab" aria-selected="false" class="filter-pill" data-filter="infrastructure">Inference Engines (<span id="count-infrastructure">2</span>)</button>
         </div>
       </section>
 
-      <section class="section model-section">
-        <div class="section-head"><div><p class="eyebrow">Models worth your time</p><h2>Start with the <em>right brain.</em></h2></div><a href="#all" class="text-link">Compare models <span>→</span></a></div>
-        <div class="model-list">
-          <article class="model-row searchable" data-type="models"><div class="rank">01</div><div class="logo a">A</div><div class="model-name"><h3>Claude Fable 5.1</h3><p>Anthropic · Frontier</p></div><p class="description">Frontier coding, knowledge work, research, and long-running tasks.</p><div class="tags"><span>Reasoning</span><span>Agents</span></div><button>View <span>↗</span></button></article>
-          <article class="model-row searchable" data-type="models"><div class="rank">02</div><div class="logo o">O</div><div class="model-name"><h3>GPT‑6 Astra</h3><p>OpenAI · Agentic</p></div><p class="description">Flagship computer use, professional work, research, and coding.</p><div class="tags"><span>1M context</span><span>API</span></div><button>View <span>↗</span></button></article>
-          <article class="model-row searchable" data-type="models"><div class="rank">03</div><div class="logo x">X</div><div class="model-name"><h3>Grok 4.6</h3><p>xAI · Frontier</p></div><p class="description">Frontier coding, agentic tasks, and knowledge work with vision input.</p><div class="tags"><span>500K context</span><span>Vision</span></div><button>View <span>↗</span></button></article>
-          <article class="model-row searchable" data-type="models"><div class="rank">04</div><div class="logo k">K</div><div class="model-name"><h3>Kimi K3</h3><p>Moonshot AI · Open weights</p></div><p class="description">Open frontier intelligence with a 1M-token context and native vision.</p><div class="tags"><span>Open source</span><span>Vision</span></div><button>View <span>↗</span></button></article>
-          <article class="model-row searchable" data-type="models"><div class="rank">05</div><div class="logo g">G</div><div class="model-name"><h3>Gemini 3.8 Flash</h3><p>Google · Fast multimodal</p></div><p class="description">Production-ready speed for browser, mobile, and desktop agents.</p><div class="tags"><span>Multimodal</span><span>API</span></div><button>View <span>↗</span></button></article>
+      <!-- 4. Live Statistics Matrix Banner -->
+      <section class="stats-banner" aria-label="Ecosystem metrics">
+        <div class="stats-grid">
+          <div class="stat-cell">
+            <div class="stat-mono-label">SWE-bench Verified</div>
+            <div class="stat-value">70.3%</div>
+            <div class="stat-detail">Claude 3.7 Sonnet SOTA</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-mono-label">Math 500 Benchmark</div>
+            <div class="stat-value">97.3%</div>
+            <div class="stat-detail">DeepSeek R1 Open Weights</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-mono-label">Context Horizon</div>
+            <div class="stat-value">2.0M</div>
+            <div class="stat-detail">Gemini 2.0 native multimodal</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-mono-label">Median API Reset</div>
+            <div class="stat-value">-97.2%</div>
+            <div class="stat-detail">Distilled open weights vs legacy</div>
+          </div>
         </div>
       </section>
 
-      <section class="prompt-section section" id="prompts"><div class="prompt-left"><p class="eyebrow">Prompt library</p><h2>Prompts that turn<br />blank pages into<br /><em>momentum.</em></h2><p>Less prompt engineering theatre. More practical starting points from people doing the work.</p><a href="#all" class="button-light">Browse all prompt kits <span>→</span></a></div><div class="prompt-cards"><article class="paper searchable" data-type="prompts"><span>PRODUCT</span><h3>Turn user interviews into a product brief</h3><p>Extract decisions, tensions, and a focused next experiment.</p><footer><i>12 min read</i><b>→</b></footer></article><article class="paper tilted searchable" data-type="templates"><span>WRITING</span><h3>The one-page strategy memo</h3><p>A thinking template for when the stakes are high.</p><footer><i>8 min read</i><b>→</b></footer></article></div></section>
+      <!-- 5. Section I: TrumpCard.gov 3D Perspective National Compute Pass -->
+      <section class="section-wrapper" id="pass">
+        <div class="section-numeral-head">
+          <span class="roman-numeral">I · Credentials</span>
+          <span class="section-title-line">The National AI Compute Pass</span>
+        </div>
 
-      <section class="section projects" id="projects"><div class="section-head"><div><p class="eyebrow">Built in public</p><h2>Projects with <em>traction.</em></h2></div><a href="#all" class="text-link">Explore projects <span>→</span></a></div><div class="project-grid"><article class="project-card searchable" data-type="templates"><div class="project-image p1"><span>V</span><i>VISUALIZE</i></div><p>DATA · CREATIVE</p><h3>Visualize</h3><small>Turn any idea into a living visual narrative.</small></article><article class="project-card searchable" data-type="repos"><div class="project-image p2"><span>◒</span><i>open-source</i></div><p>DEVELOPER TOOLS</p><h3>Continue</h3><small>The open-source AI code assistant.</small></article><article class="project-card searchable" data-type="models"><div class="project-image p3"><span>◉</span><i>make it real</i></div><p>DESIGN · AI</p><h3>v0</h3><small>Generative UI from a simple text prompt.</small></article></div></section>
+        <div class="compute-card-section">
+          <div class="compute-card-copy">
+            <h2>Dignity &amp; Sovereignty<br /><em>for American Builders.</em></h2>
+            <p>
+              Modeled after the executive standards of <strong>America by Design</strong>, the National Compute Pass provides authenticated developers, researchers, and engineers with direct access to non-commercial sovereign AI mirrors, certified zero-retention API endpoints, and subsidized national laboratory clusters.
+            </p>
+            <ul class="card-privileges">
+              <li>Direct routing to high-throughput vLLM clusters at the 17 DOE National Labs</li>
+              <li>Priority token queues for certified non-retention reasoning endpoints</li>
+              <li>Zero foreign telemetry and full Section 508 accessibility compliance</li>
+              <li>Pre-configured Model Context Protocol (MCP) server endpoints</li>
+            </ul>
+          </div>
 
-      <section class="open-source section" id="open-source"><div><p class="eyebrow">Open-source radar</p><h2>What builders are<br /><em>actually starring.</em></h2><a href="#all" class="text-link">Browse repositories <span>→</span></a></div><div class="repo-list"><article class="searchable" data-type="repos"><span>01</span><div><h3>browser-use</h3><p>Make websites accessible for AI agents.</p></div><b>★ 61,831</b><button>↗</button></article><article class="searchable" data-type="repos"><span>02</span><div><h3>Open WebUI</h3><p>User-friendly self-hosted AI interface.</p></div><b>★ 78,204</b><button>↗</button></article><article class="searchable" data-type="repos"><span>03</span><div><h3>ComfyUI</h3><p>The most powerful node-based image workflow.</p></div><b>★ 63,319</b><button>↗</button></article></div></section>
+          <!-- 3D Perspective Card (TrumpCard Style) -->
+          <div class="card-3d-wrapper">
+            <div class="card-3d" id="compute-pass-card" onmousemove="handleCardTilt(event)" onmouseleave="resetCardTilt()">
+              <div class="card-top-row">
+                <div class="card-chip"></div>
+                <div class="card-seal-text">
+                  Executive Office<br />
+                  National Design Studio<br />
+                  EO 14338
+                </div>
+              </div>
+
+              <div class="card-number">
+                4700 · 2026 · 8891 · 0042
+              </div>
+
+              <div class="card-bottom-row">
+                <div>
+                  <div style="font-size: 8px; color: rgba(255,255,255,0.5); letter-spacing: 0.1em; text-transform: uppercase;">Cardholder</div>
+                  <div class="card-holder">FRONTIER BUILDER</div>
+                </div>
+                <div class="card-tier-badge">
+                  Tier 1 Citizen
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Section II: RealFood.gov Inverted AI Stack Pyramid -->
+      <section class="section-wrapper" id="hierarchy">
+        <div class="section-numeral-head">
+          <span class="roman-numeral">II · Architecture</span>
+          <span class="section-title-line">The Modern AI Stack Hierarchy</span>
+        </div>
+
+        <div class="pyramid-section">
+          <div class="pyramid-container">
+            <div class="pyramid-tier tier-1 active" onclick="selectTier(1)">
+              <div class="tier-header">
+                <span class="tier-title">Tier 1: Multi-Agent Workflows &amp; MCP</span>
+                <span class="tier-level">Apex Level</span>
+              </div>
+              <p class="tier-desc">Autonomous browser-use agents, Model Context Protocol (MCP) tools, and self-correcting loops.</p>
+            </div>
+
+            <div class="pyramid-tier tier-2" onclick="selectTier(2)">
+              <div class="tier-header">
+                <span class="tier-title">Tier 2: Hybrid Reasoning Engines</span>
+                <span class="tier-level">Cognitive Core</span>
+              </div>
+              <p class="tier-desc">Dynamic thinking budgets, deep multi-step verification, and mathematical proof engines (Claude 3.7, o3, DeepSeek R1).</p>
+            </div>
+
+            <div class="pyramid-tier tier-3" onclick="selectTier(3)">
+              <div class="tier-header">
+                <span class="tier-title">Tier 3: Specialized Task Distillations</span>
+                <span class="tier-level">Task Execution</span>
+              </div>
+              <p class="tier-desc">High-speed, cost-optimized coding and multimodal specialists (Gemini 2.0 Flash, Qwen 2.5-Coder 32B).</p>
+            </div>
+
+            <div class="pyramid-tier tier-4" onclick="selectTier(4)">
+              <div class="tier-header">
+                <span class="tier-title">Tier 4: Local Runtimes &amp; Hardware Engines</span>
+                <span class="tier-level">Foundation</span>
+              </div>
+              <p class="tier-desc">PagedAttention throughput, tensor parallelism, and sovereign edge runtimes (vLLM, SGLang, Ollama).</p>
+            </div>
+          </div>
+
+          <div class="tier-detail-card" id="tier-detail-card">
+            <small class="font-mono text-nds-caption" style="color: var(--accent-blue); text-transform: uppercase;">Architecture Prescription</small>
+            <h3 id="tier-display-title">Autonomous Agents &amp; Model Context Protocol</h3>
+            <p id="tier-display-desc">
+              The highest leverage layer in modern software. Instead of simple chat completions, agents dynamically inspect system state, call external database tools via standardized MCP connectors, and self-lint code before proposing diffs.
+            </p>
+            <div style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-subtle); margin-bottom: 8px;">Key Technologies at This Layer:</div>
+            <div class="tier-models-list" id="tier-display-models">
+              <span class="tier-model-tag">Model Context Protocol (MCP)</span>
+              <span class="tier-model-tag">browser-use</span>
+              <span class="tier-model-tag">LangGraph</span>
+              <span class="tier-model-tag">Smolagents</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Section III: TrumpRx Style Live Cost & Latency Benchmark -->
+      <section class="section-wrapper" id="economics">
+        <div class="section-numeral-head">
+          <span class="roman-numeral">III · Economics</span>
+          <span class="section-title-line">Interactive Token Volume &amp; Price Reset Simulator</span>
+        </div>
+
+        <div class="cost-comparison-card">
+          <div class="cost-chart-header">
+            <div>
+              <h3 class="cost-chart-title">The Frontier Price Reset</h3>
+              <p class="cost-chart-subtitle" id="cost-subtitle">
+                Complex Multi-Step Reasoning &amp; Chain-of-Thought Workloads
+              </p>
+            </div>
+
+            <div style="display: flex; gap: 8px;">
+              <button class="filter-pill active" id="tab-cost-reasoning" onclick="setCostMode('reasoning')">Reasoning</button>
+              <button class="filter-pill" id="tab-cost-vision" onclick="setCostMode('vision')">Vision OCR</button>
+              <button class="filter-pill" id="tab-cost-agents" onclick="setCostMode('agents')">Agent Loops</button>
+            </div>
+          </div>
+
+          <!-- Dynamic Monthly Volume Slider -->
+          <div class="volume-slider-box">
+            <div class="slider-label-row">
+              <span style="color: var(--ink-muted); text-transform: uppercase;">Simulated Monthly Token Consumption</span>
+              <span class="slider-val-highlight"><span id="volume-display">50</span> Million Tokens / mo</span>
+            </div>
+            <input
+              type="range"
+              id="volume-slider"
+              class="volume-range-input"
+              min="5"
+              max="500"
+              step="5"
+              value="50"
+              oninput="handleVolumeChange(this.value)"
+            />
+          </div>
+
+          <div class="comparison-columns-grid">
+            <!-- Legacy Column -->
+            <div class="comp-col">
+              <div class="comp-price-tag danger" id="legacy-price">
+                $750 <span class="unit">/ month</span>
+              </div>
+              <div class="comp-bar high" id="legacy-bar" style="height: 270px;"></div>
+            </div>
+
+            <!-- Optimized Open Weights Column -->
+            <div class="comp-col">
+              <div class="comp-price-tag success" id="opt-price">
+                $22.50 <span class="unit">/ month</span>
+              </div>
+              <div class="comp-bar low" id="opt-bar" style="height: 48px;">
+                <span class="comp-savings-badge" id="savings-badge">Save $727.50 / mo (97% Reduction)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="comp-footer-meta">
+            <div>
+              <div class="comp-meta-label">Legacy Closed API Pricing</div>
+              <div class="comp-meta-sub">Standard Proprietary Pay-per-Token Cloud</div>
+            </div>
+            <div>
+              <div class="comp-meta-label">Distilled Open Weights / vLLM</div>
+              <div class="comp-meta-sub">DeepSeek R1 / Llama 3.3 Sovereign Compute</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. Section IV: The Master Directory with Detailed Spec Drawer -->
+      <section class="section-wrapper" id="directory">
+        <div class="section-numeral-head">
+          <span class="roman-numeral">IV · Master Index</span>
+          <span class="section-title-line" id="directory-count-line">
+            12 Models &amp; Assets Cataloged
+          </span>
+        </div>
+
+        <div class="directory-table-head">
+          <span>Rank</span>
+          <span>Entity &amp; Lab</span>
+          <span>Functional Scope</span>
+          <span>Context / Quant</span>
+          <span>Unit Rate</span>
+          <span style="text-align: right;">Inspect</span>
+        </div>
+
+        <div class="directory-list" id="directory-list-container">
+          <!-- Dynamically populated by JavaScript -->
+        </div>
+      </section>
+
+      <!-- 9. Section V: Collaborators Infinite Marquee (Genesis Style) -->
+      <section class="marquee-wrapper" aria-label="Collaborating ecosystem labs">
+        <div class="marquee-track">
+          <span>Anthropic</span><b>✦</b>
+          <span>DeepSeek</span><b>✦</b>
+          <span>OpenAI</span><b>✦</b>
+          <span>Google DeepMind</span><b>✦</b>
+          <span>Meta AI</span><b>✦</b>
+          <span>Alibaba Qwen</span><b>✦</b>
+          <span>xAI</span><b>✦</b>
+          <span>Hugging Face</span><b>✦</b>
+          <span>vLLM Project</span><b>✦</b>
+          <span>Ollama</span><b>✦</b>
+          <span>Model Context Protocol</span><b>✦</b>
+          <span>Anthropic</span><b>✦</b>
+          <span>DeepSeek</span><b>✦</b>
+          <span>OpenAI</span><b>✦</b>
+          <span>Google DeepMind</span><b>✦</b>
+          <span>Meta AI</span><b>✦</b>
+          <span>Alibaba Qwen</span><b>✦</b>
+          <span>xAI</span><b>✦</b>
+        </div>
+      </section>
+
+      <!-- 10. Section VI: Battle-Tested Prompt Library -->
+      <section class="section-wrapper" id="prompts">
+        <div class="section-numeral-head">
+          <span class="roman-numeral">V · Blueprints</span>
+          <span class="section-title-line">2026 Production System Prompts</span>
+        </div>
+
+        <div class="prompt-grid">
+          <article class="prompt-card">
+            <div>
+              <div class="prompt-card-top">
+                <span class="prompt-tag">Hybrid Reasoning</span>
+                <span class="prompt-reading-time">Claude 3.7 Calibrated</span>
+              </div>
+              <h3>Extended Thinking Budget Controller</h3>
+              <p>Directs Claude 3.7 or DeepSeek R1 to calibrate reasoning tokens proportionally to problem complexity without overthinking simple tasks.</p>
+            </div>
+            <div class="prompt-card-footer">
+              <button class="btn-copy-prompt" onclick="copyPrompt('thinking-controller', this)">Copy Blueprint →</button>
+              <span class="font-mono text-nds-micro" style="color: var(--ink-subtle);">Verified System</span>
+            </div>
+          </article>
+
+          <article class="prompt-card">
+            <div>
+              <div class="prompt-card-top">
+                <span class="prompt-tag">Self-Verification</span>
+                <span class="prompt-reading-time">DeepSeek R1 Optimized</span>
+              </div>
+              <h3>Structured Self-Reflection Loop</h3>
+              <p>Forces autonomous code agents to generate test cases first, evaluate diffs against edge cases, and execute verification before outputting.</p>
+            </div>
+            <div class="prompt-card-footer">
+              <button class="btn-copy-prompt" onclick="copyPrompt('self-reflection', this)">Copy Blueprint →</button>
+              <span class="font-mono text-nds-micro" style="color: var(--ink-subtle);">Zero Regression</span>
+            </div>
+          </article>
+
+          <article class="prompt-card">
+            <div>
+              <div class="prompt-card-top">
+                <span class="prompt-tag">Tool Calling</span>
+                <span class="prompt-reading-time">Model Context Protocol</span>
+              </div>
+              <h3>MCP Universal Tool Coordinator</h3>
+              <p>The standard system instruction for coordinating multiple remote MCP servers (filesystem, Postgres, GitHub, browser) in zero-shot workflows.</p>
+            </div>
+            <div class="prompt-card-footer">
+              <button class="btn-copy-prompt" onclick="copyPrompt('mcp-coordinator', this)">Copy Blueprint →</button>
+              <span class="font-mono text-nds-micro" style="color: var(--ink-subtle);">Open Protocol</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 11. Section VII: TechForce AI Corps Tracks Accordion -->
+      <section class="section-wrapper" id="tracks">
+        <div class="section-numeral-head">
+          <span class="roman-numeral">VI · Missions</span>
+          <span class="section-title-line">National Civic Technology Challenges</span>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-title-area">
+            <h2>High-Stakes Missions</h2>
+            <p>
+              Under the White House's <em>America by Design</em> executive standard, elite technical corps are deploying frontier models to overhaul federal infrastructure.
+            </p>
+          </div>
+
+          <div class="accordion-list">
+            <div class="accordion-item open">
+              <button class="accordion-trigger" onclick="toggleFaq(this)">
+                <span>Track 01: Federal Health AI (TrumpRx &amp; FDA Price Verification)</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-body">
+                <p>Deploying specialized mathematical reasoning models to cross-reference global prescription pricing, automate manufacturer coupons, and ensure Most-Favored-Nation prices for every American family.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger" onclick="toggleFaq(this)">
+                <span>Track 02: Scientific Supercomputing (Genesis Mission Across 17 Labs)</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-body">
+                <p>Building high-performance compute fabrics integrating Frontier, Aurora, and El Capitan supercomputers with scientific AI models to double national research velocity within a decade.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger" onclick="toggleFaq(this)">
+                <span>Track 03: Radical Friction Reduction (90 Clicks to 9)</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-body">
+                <p>Retiring antiquated paper mines and Byzantine bureaucratic websites. Using autonomous browser-use and verified form synthesis to give Americans back their 10 billion lost hours.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger" onclick="toggleFaq(this)">
+                <span>Track 04: Sovereign Edge Computing &amp; Zero Foreign Telemetry</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-body">
+                <p>Hardening federal agencies with locally hosted open-weights runtimes (vLLM and Ollama), ensuring zero citizen data leaves sovereign boundaries.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12. Section VIII: Dark Mode CTA & Monumental Footer -->
+      <section class="dark-cta-section">
+        <div class="dark-cta-inner">
+          <span class="font-mono text-nds-caption" style="color: var(--dark-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px;">
+            The Next 250 Years of American Technology
+          </span>
+          <h2>Ready to build?</h2>
+          <p>
+            Explore verified models, benchmark your stack, and deploy sovereign intelligence with zero friction.
+          </p>
+          <div class="dark-cta-buttons">
+            <a href="#directory" class="btn-white-pill">
+              Explore Master Index <span>↗</span>
+            </a>
+            <a href="mailto:submit@aiexplorer.gov" class="btn-dark-outline">
+              Submit Model or Tool
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer><a class="brand" href="#top"><span class="brand-mark">✦</span> AI EXPLORER</a><p>Signal over noise, every day.</p><div><a href="#top">Instagram</a><a href="#top">X / Twitter</a><a href="#top">GitHub</a></div></footer>
+
+    <!-- 13. Monumental Footer (NDS Brand Mark + Federal Colophon) -->
+    <footer class="monumental-footer">
+      <div class="footer-inner">
+        <div class="footer-top-grid">
+          <div class="footer-brand-col">
+            <h3>AI Explorer</h3>
+            <p>
+              The authoritative national index documenting applied artificial intelligence, frontier hybrid reasoning, and sovereign open-source computing.
+            </p>
+          </div>
+
+          <div class="footer-nav-col">
+            <h4>Directory</h4>
+            <div class="footer-nav-links">
+              <a href="#console">Prompt Engine</a>
+              <a href="#pass">Compute Pass</a>
+              <a href="#hierarchy">AI Hierarchy</a>
+              <a href="#economics">Cost Reset</a>
+              <a href="#directory">Frontier Models</a>
+            </div>
+          </div>
+
+          <div class="footer-nav-col">
+            <h4>Standards</h4>
+            <div class="footer-nav-links">
+              <a href="#tracks">National Missions</a>
+              <a href="#prompts">System Blueprints</a>
+              <a href="#tracks">Section 508 Access</a>
+              <a href="#tracks">Zero Telemetry</a>
+            </div>
+          </div>
+
+          <div class="footer-subscribe-col">
+            <h4>Dispatch Briefing</h4>
+            <p>Weekly intelligence updates on verified frontier models and open-weights breakthroughs.</p>
+            <div id="subscribe-status" style="display: none; font-family: var(--font-mono); font-size: 11px; color: var(--accent-green); padding: 8px 0;">
+              ✓ Subscription confirmed. Welcome to the dispatch.
+            </div>
+            <form class="subscribe-form" id="footer-subscribe-form" onsubmit="handleSubscribe(event)">
+              <input
+                type="email"
+                required
+                placeholder="Enter your email"
+                class="subscribe-input"
+                id="footer-email-input"
+              />
+              <button type="submit" class="subscribe-btn">
+                Subscribe →
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Giant Wordmark Display -->
+        <div class="giant-wordmark-container">
+          <div class="giant-wordmark">AI EXPLORER</div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div class="footer-colophon">
+            Designed &amp; Engineered to the <strong>National Design Studio</strong> standard.
+          </div>
+          <div>
+            <span>Washington, D.C. · Eisenhower Executive Office Building</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Slide-Over Spec Drawer Modal -->
+    <div class="modal-overlay" id="spec-modal" onclick="closeSpecModal(event)">
+      <div class="spec-drawer" onclick="event.stopPropagation()">
+        <div class="spec-drawer-header">
+          <div>
+            <h3 id="modal-title">Claude 3.7 Sonnet</h3>
+            <p id="modal-provider">Anthropic · Frontier Hybrid Reasoning</p>
+          </div>
+          <button class="btn-close-drawer" onclick="closeSpecModal()">✕</button>
+        </div>
+
+        <div class="spec-metrics-grid">
+          <div class="spec-metric-box">
+            <small>Benchmark SOTA</small>
+            <div id="modal-benchmark">70.3% SWE-bench</div>
+          </div>
+          <div class="spec-metric-box">
+            <small>Context Length</small>
+            <div id="modal-context">200K / 64K Thinking</div>
+          </div>
+          <div class="spec-metric-box">
+            <small>Input Rate</small>
+            <div id="modal-input-rate">$3.00 / 1M tokens</div>
+          </div>
+          <div class="spec-metric-box">
+            <small>Output Rate</small>
+            <div id="modal-output-rate">$15.00 / 1M tokens</div>
+          </div>
+        </div>
+
+        <div style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; color: var(--ink-subtle); margin-bottom: 6px;">
+          Technical Overview
+        </div>
+        <p id="modal-description" style="font-size: 14px; line-height: 1.6; color: var(--ink-muted); margin-bottom: 20px;">
+          First hybrid model allowing seamless switching between instant response and extended thinking.
+        </p>
+
+        <div style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; color: var(--ink-subtle); margin-bottom: 6px;">
+          Quickstart Terminal Execution
+        </div>
+        <pre class="code-snippet-box" id="modal-code">curl https://api.anthropic.com/v1/messages ...</pre>
+
+        <div style="margin-top: auto; display: flex; gap: 12px; padding-top: 20px; border-top: 1px solid var(--border);">
+          <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary-pill" style="flex: 1; justify-content: center;">
+            Official Documentation <span>↗</span>
+          </a>
+          <button class="btn-search-trigger" onclick="copyModalCode()">
+            Copy Code
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script src="./script.js"></script>
   </body>
 </html>
